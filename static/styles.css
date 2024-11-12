@@ -1,0 +1,130 @@
+/* General page styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e9eff5; /* Background color for the whole page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container styling for the to-do list card */
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff; /* White card background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 80vh; /* Set a fixed height for scrolling */
+    overflow: hidden; /* Prevent the container from expanding */
+}
+
+/* Title styling */
+h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #333333;
+    margin-bottom: 1rem;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/* Text input styling */
+form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px 0 0 6px;
+    font-size: 1rem;
+}
+
+/* Add button styling */
+form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #43a047;
+}
+
+/* To-do list styling with scroll */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    flex-grow: 1; /* Take up remaining space in container */
+    border-top: 1px solid #ddd;
+}
+
+/* Scroll bar styling */
+ul::-webkit-scrollbar {
+    width: 8px;
+}
+ul::-webkit-scrollbar-thumb {
+    background-color: #bbb;
+    border-radius: 8px;
+}
+
+/* To-do item styling */
+li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li span {
+    flex: 1;
+    font-size: 1rem;
+    color: #333333;
+}
+
+/* Completed task styling */
+li.completed span {
+    text-decoration: line-through;
+    color: #888888;
+}
+
+/* Checkbox styling */
+li input[type="checkbox"] {
+    accent-color: #4CAF50;
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Delete button styling */
+li button {
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+li button:hover {
+    background-color: #e64a19;
+}
